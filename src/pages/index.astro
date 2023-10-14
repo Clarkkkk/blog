@@ -26,7 +26,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       <h1 class="mr-2">Aaron's Blog</h1>
       <a
         target="_blank"
-        href="/rss.xml"
+        href="/blog/rss.xml"
         class="rss-link"
         aria-label="rss feed"
         title="RSS Feed"
@@ -64,7 +64,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             <ul>
               {featuredPosts.map(({ data, body }) => (
                 <Card
-                  href={`/posts/${slugify(data)}`}
+                  href={`/blog/posts/${slugify(data)}`}
                   frontmatter={data}
                   secHeading={false}
                   body={body}
@@ -88,7 +88,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
               ({ data, body }) => {
                 return <Card
                     client:load
-                    href={`/posts/${slugify(data)}`}
+                    href={`/blog/posts/${slugify(data)}`}
                     frontmatter={data}
                     secHeading={false}
                     body={body}
@@ -98,7 +98,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         }
       </ul>
       <div class="all-posts-btn-wrapper">
-        <LinkButton href="/posts">
+        <LinkButton href="/blog/posts">
           All Posts
           <svg xmlns="http://www.w3.org/2000/svg"
             ><path

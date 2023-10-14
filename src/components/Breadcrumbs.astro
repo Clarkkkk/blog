@@ -4,7 +4,7 @@ const currentUrlPath = Astro.url.pathname.replace(/\/+$/, "");
 
 // Get url array from path
 // eg: /tags/tailwindcss => ['tags', 'tailwindcss']
-const breadcrumbList = currentUrlPath.split("/").slice(1).map((item) => decodeURIComponent(item));
+const breadcrumbList = currentUrlPath.split("/").slice(2).map((item) => decodeURIComponent(item));
 
 // if breadcrumb is Home > Posts > 1 <etc>
 // replace Posts with Posts (page number)
@@ -15,7 +15,7 @@ breadcrumbList[0] === "posts" &&
 <nav class="breadcrumb" aria-label="breadcrumb">
   <ul>
     <li>
-      <a href="/">Home</a>
+      <a href="/blog/">Home</a>
       <span aria-hidden="true">&nbsp;&gt;&nbsp;</span>
     </li>
     {
@@ -23,7 +23,6 @@ breadcrumbList[0] === "posts" &&
         index + 1 === breadcrumbList.length ? (
           <li>
             <span
-              class={`${index > 0 ? "lowercase" : "capitalize"}`}
               aria-current="page"
             >
               {/* make the last part lowercase in Home > Tags > some-tag */}
@@ -32,7 +31,7 @@ breadcrumbList[0] === "posts" &&
           </li>
         ) : (
           <li>
-            <a href={`/${breadcrumb}`}>{breadcrumb}</a>
+            <a href={`/blog/${breadcrumb}`}>{breadcrumb}</a>
             <span aria-hidden="true">&nbsp;&gt;&nbsp;</span>
           </li>
         )

@@ -44,7 +44,7 @@ export const Coverflow = () => {
 
 我们需要横向排列的列表，简单加上一些CSS。
 
-```CSS
+```css
 .coverflow {
   display: flex;
   align-items: center;
@@ -72,7 +72,7 @@ export const Coverflow = () => {
 
 这样讲有点不直观，我们直接修改一下CSS先看看效果（只写出新增或修改的CSS，下同）。
 
-```CSS
+```css
 .cover-image {
   animation: flip linear;
   animation-timeline: view(x);
@@ -103,7 +103,7 @@ export const Coverflow = () => {
 
 我们的图片是150px宽，因此我们以中间为分界，向左右分别扩展75px，共100px的范围。
 
-```CSS
+```css
 .cover-image {
   animation-range: calc(50% - 75px) calc(50% + 75px);
   /* 或使用view()的第二组参数，指定偏移量 */
@@ -114,7 +114,7 @@ export const Coverflow = () => {
 
 设定范围后，在范围外的图片会恢复正面显示，因此我们还需要设置一下[animation-fill-mode](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode)，在`animation`中加上both。
 
-```CSS
+```css
 .cover-image {
   animation: flip linear both;
 }
@@ -126,7 +126,7 @@ export const Coverflow = () => {
 
 专辑排列应该更紧凑：
 
-```CSS
+```css
 .cover-container:not(:first-child) {
   margin-left: -100px;
 }
@@ -154,7 +154,7 @@ export const Coverflow = () => {
 
 同时，`transform-style`不会向下继承，我们需要给从图片到公共容器之间的所有容器都加上这个属性，最后的CSS如下：
 
-```CSS
+```css
 .scroll-container {
   overflow-x: auto;
   display: flex;
@@ -174,7 +174,7 @@ export const Coverflow = () => {
 
 在容器左右加上padding，使得滚动条在最左边或最右边的时候，第一张图片和最后一张图片正好处于容器的正中间：
 
-```CSS
+```css
 .coverflow {
   padding: 0 calc(50% - 75px);
 }
@@ -217,7 +217,7 @@ export const Coverflow = () => {
 
 用鼠标拖动滚动条来横向滚动，这个体验不太好，我们监听一下鼠标滚轮事件，用鼠标滚轮来横向滚动。
 
-```JSX
+```jsx
 export const Coverflow = () => {
   function onWheel(e: React.WheelEvent) {
     const element = e.currentTarget
@@ -245,7 +245,7 @@ export const Coverflow = () => {
 
 直接加上CSS，看看效果：
 
-```CSS
+```css
 .scroll-container {
   scroll-snap-type: x mandatory;
 }
