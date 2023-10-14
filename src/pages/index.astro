@@ -44,7 +44,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         我是Aaron，一名半路出家的前端开发者。
       </p>
       <p>
-        这个博客会记录一些前端相关的技术分享、博文翻译、踩坑记录等，不定期更新。
+        这个博客会记录一些前端相关的技术分享、博文翻译、踩坑记录等，知乎上的回答和文章也会在这里同步。
       </p>
       {
         // only display if at least one social link is enabled
@@ -63,11 +63,12 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           <section id="featured">
             <h2>Featured</h2>
             <ul>
-              {featuredPosts.map(({ data }) => (
+              {featuredPosts.map(({ data, body }) => (
                 <Card
                   href={`/posts/${slugify(data)}`}
                   frontmatter={data}
                   secHeading={false}
+                  body={body}
                 />
               ))}
             </ul>
@@ -78,18 +79,20 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     }
 
     <section id="recent-posts">
-      <h2>Recent Posts</h2>
+      <h2 class="mb-6">近期文章</h2>
       <ul>
         {
           sortedPosts
             .slice(0, 5)
             .filter(({ data }) => !data.featured)
             .map(
-              ({ data }) => {
+              ({ data, body }) => {
                 return <Card
+                    client:load
                     href={`/posts/${slugify(data)}`}
                     frontmatter={data}
                     secHeading={false}
+                    body={body}
                   />
               }
             )

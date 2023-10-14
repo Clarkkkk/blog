@@ -26,9 +26,9 @@ const next = pageNum < totalPages ? "" : "disabled";
   <Main pageTitle="Posts" pageDesc="All the articles I've posted.">
     <ul>
       {
-        posts.map(({ data }) => (
-          <Card href={`/posts/${slugify(data)}`} frontmatter={data} />
-        ))
+        posts.map(({data, body}) => {
+          return <Card href={`/posts/${slugify(data)}`} frontmatter={data} body={body} client:load />
+        })
       }
     </ul>
   </Main>

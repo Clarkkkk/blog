@@ -1,8 +1,8 @@
-import Fuse from 'fuse.js'
-import { useEffect, useRef, useState, useMemo } from 'react'
 import Card from '@components/Card'
 import slugify from '@utils/slugify'
 import type { CollectionEntry } from 'astro:content'
+import Fuse from 'fuse.js'
+import { useEffect, useMemo, useRef, useState } from 'react'
 
 export type SearchItem = {
     title: string
@@ -56,7 +56,7 @@ export default function SearchBar({ searchList }: Props) {
     useEffect(() => {
         // Add search result only if
         // input value is more than one character
-        let inputResult = inputVal.length > 1 ? fuse.search(inputVal) : []
+        const inputResult = inputVal.length > 1 ? fuse.search(inputVal) : []
         setSearchResults(inputResult)
 
         // Update search string in URL
