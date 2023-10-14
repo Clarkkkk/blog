@@ -1,12 +1,22 @@
 {
-    "name": "astro-paper",
-    "version": "3.0.0",
+    "name": "blog-of-aaron",
+    "version": "1.0.0",
     "private": false,
     "type": "module",
+    "author": "Aaron Zhou",
+    "license": "MIT",
+    "homepage": "https://github.com/Clarkkkk/blog#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Clarkkkk/blog"
+    },
+    "bugs": {
+        "url": "https://github.com/Clarkkkk/blog/issues"
+    },
     "scripts": {
         "dev": "astro dev",
         "start": "astro dev",
-        "build": "astro build && jampack ./dist",
+        "build": "astro build",
         "preview": "astro preview",
         "sync": "astro sync",
         "astro": "astro",
