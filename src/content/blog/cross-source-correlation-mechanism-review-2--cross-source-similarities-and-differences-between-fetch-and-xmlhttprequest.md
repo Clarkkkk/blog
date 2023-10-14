@@ -11,7 +11,7 @@ tags:
 ---
 ### Fetch
 
-fetch(resource, init)函数 接收一个resource参数和一个可选的init对象。其中resource可为URL字符串，也可为一个Request对象 。Request对象也提供构造函数Request(resource, init)，其接收的参数与fetch()大致相同，这里先略去。
+fetch(resource, init)函数 接收一个resource参数和一个可选的init对象。其中resource可为URL字符串，也可为一个Request对象。Request对象也提供构造函数Request(resource, init)，其接收的参数与fetch()大致相同，这里先略去。
 
 init对象参数中可声明的属性有很多，下面简要介绍几个与跨源请求相关的属性。
 
@@ -37,11 +37,11 @@ Response.type：只读，表示响应的类型。可能的值有：
 
 Response.headers：只读，是一个Headers对象，包含响应的首部。如CORS中所述，当Response.type为cors时，只有CORS-safelisted response header和Access-Control-Expose-Headers中声明的首部能通过这个属性对象访问。
 
-上文提到，一些嵌入元素允许使用跨源资源，但在同源策略的限制下，JavaScript不能读取这些资源的内部信息。如果我们使用Fetch API以no-cors模式手动请求这些资源，就会得到一个不透明响应，即类型为opaque的响应。JavaScript既没有办法读取、也没有办法修改这样的响应，因此一般来说，这样的响应用处不大。不过，在Service Worker中，我们仍然可以使用Cache API将这样的不透明响应缓存起来，以加快加载速度，或供离线使用。这样做会有相应的局限 。
+上文提到，一些嵌入元素允许使用跨源资源，但在同源策略的限制下，JavaScript不能读取这些资源的内部信息。如果我们使用Fetch API以no-cors模式手动请求这些资源，就会得到一个不透明响应，即类型为opaque的响应。JavaScript既没有办法读取、也没有办法修改这样的响应，因此一般来说，这样的响应用处不大。不过，在Service Worker中，我们仍然可以使用Cache API将这样的不透明响应缓存起来，以加快加载速度，或供离线使用。这样做会有相应的局限。
 
 ### XMLHttpRequest
 
-由于IE浏览器不支持Fetch API ，需要兼容IE时，只能使用XMLHttpRequest接口 。
+由于IE浏览器不支持Fetch API ，需要兼容IE时，只能使用XMLHttpRequest接口。
 
 这里不讲XMLHttpRequest的用法 ，只说明XMLHttpRequest与Fetch在跨源方面的几处不同：
 
@@ -49,7 +49,7 @@ Response.headers：只读，是一个Headers对象，包含响应的首部。如
 - XMLHttpRequest对象的withCredentials属性用于控制跨源请求是否带上凭据，默认值为false。根据规范 ，XMLHttpRequest的凭据模式只有include和same-origin两种。也就是说，withCredentials只用于控制跨源请求的凭据模式，true为include，false为same-origin。而同源请求则一律带上凭据。因此，想要不带凭据地发出同源请求将难以做到（仅Firefox提供了非标准的语法 ）。
 - XMLHttpRequest使用setRequestHeader() 来设置请求的首部。与Fetch一样，有一部分首部（Forbidden header name ）不能设置。
 - XMLHttpRequest使用getResponseHeader() 来获取响应的首部。获取首部的限制与Fetch一样。
-- 当在XMLHttpRequest.upload属性对象 上注册事件或创建的请求不是一个简单请求时，浏览器会发出先preflight请求 。
+- 当在XMLHttpRequest.upload属性对象 上注册事件或创建的请求不是一个简单请求时，浏览器会发出先preflight请求。
 
 ## 文章目录
 

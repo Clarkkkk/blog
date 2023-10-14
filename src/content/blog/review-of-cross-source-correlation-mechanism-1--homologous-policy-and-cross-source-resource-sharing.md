@@ -15,9 +15,9 @@ Same-origin policy，即同源策略  ，是浏览器的一个安全机制，用
 
 举一个简单的例子，比如用户登录了一个银行网站，同时打开了另一个恶意网站。如果没有同源策略，恶意网站可通过脚本向银行网站发出请求，由于此时用户是登录状态，恶意网站就能够获取用户的账户信息，或发起转账，盗取用户钱财。
 
-同源的定义是，两个源的协议（scheme）、域名（domain）、端口（port）均相同 。此外，在URL为 about:blank或javascript:的页面上的脚本会继承包含该URL的页面所属的源。但data:类的URL会获得一个全新的、空的安全上下文 。
+同源的定义是，两个源的协议（scheme）、域名（domain）、端口（port）均相同。此外，在URL为 about:blank或javascript:的页面上的脚本会继承包含该URL的页面所属的源。但data:类的URL会获得一个全新的、空的安全上下文。
 
-在IE中，属于Trust Zone中的域不受同源策略限制。并且IE不检查端口号 。
+在IE中，属于Trust Zone中的域不受同源策略限制。并且IE不检查端口号。
 
 跨源操作包括以下三类：
 
@@ -115,11 +115,11 @@ null应避免使用。乍看之下，null似乎不允许任何源访问资源，
 
 用于响应带有Access-Control-Request-Headers首部的preflight请求，表示允许使用的首部。多个首部以逗号隔开。对于不带认证凭据的请求，可使用通配符*。
 
-CORS-safelisted request header（即Accept、Accept-Language、Content-Language、Content-Type） 不需要声明也可直接使用，但也可以显式声明这些首部，以绕过一些额外的限制 。
+CORS-safelisted request header（即Accept、Accept-Language、Content-Language、Content-Type） 不需要声明也可直接使用，但也可以显式声明这些首部，以绕过一些额外的限制。
 
 **Access-Control-Max-Age**
 
-表示preflight请求的响应可以缓存的时间秒数，在这段时间内，不需要再次发送preflight请求。设为-1表示不允许缓存。该值有最大值，各浏览器有所不同 。
+表示preflight请求的响应可以缓存的时间秒数，在这段时间内，不需要再次发送preflight请求。设为-1表示不允许缓存。该值有最大值，各浏览器有所不同。
 
 **Access-Control-Expose-Headers**
 
