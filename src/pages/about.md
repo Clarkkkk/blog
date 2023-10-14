@@ -3,34 +3,27 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
+这个博客使用Astro搭建，样式风格从AstroPaper发展而来。
 
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
+## 技术栈
 
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
+- Astro
+- React
+- TypeScript
+- TailwindCSS
+- Markdown
 
-<div>
-  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
+## 特点
+
+- 响应式布局
+- 无障碍
+- SEO友好
+- 浅色/深色模式
+- 模糊搜索
+- RSS订阅
+
+如果你想提出自己的想法，欢迎在[这里](https://github.com/Clarkkkk/blog/issues)提交issue，或者通过[电子邮件](mailto:clark1729@outlook.com)与我交流。
+
+<div class="mt-24 sm:mt-36">
+  <img src="/assets/alalei.png" class="w-48 sm:w-60 mx-auto about-image" alt="阿拉蕾，是日本漫画家鸟山明创作的著名角色">
 </div>
-
-## Tech Stack
-
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
-
-## Features
-
-Here are certain features of this site.
-
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
-
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
