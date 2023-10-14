@@ -25,13 +25,13 @@ Same-origin policy，即同源策略  ，是浏览器的一个安全机制，用
 2. 跨源读取一般是禁止的。但读取权限常常在嵌入中泄露。例如，你可以读取一张嵌入图片的尺寸、读取嵌入脚本的动作等。
 3. 跨源嵌入一般也是允许的。例子见下：
 
-- 使用<script src="…"></script>嵌入的JavaScript。对于嵌入脚本，具体的语法error信息只在同源脚本中可见，且跨源脚本禁止使用诸如跨源fetch请求等API（存疑）
-- 使用<link rel="stylesheet" href="…">嵌入的CSS。由于对CSS的语法解析规则十分宽松 ，跨源的CSS需要声明一个正确的Content-Type首部
-- 使用<img>嵌入的图片
-- 使用<video>和<audio>嵌入的媒体
-- 使用<object>和<embed>嵌入的其他资源
+- 使用`<script src="…">``</script>`嵌入的JavaScript。对于嵌入脚本，具体的语法error信息只在同源脚本中可见，且跨源脚本禁止使用诸如跨源fetch请求等API（存疑）
+- 使用`<link rel="stylesheet" href="…">`嵌入的CSS。由于对CSS的语法解析规则十分宽松 ，跨源的CSS需要声明一个正确的Content-Type首部
+- 使用`<img>`嵌入的图片
+- 使用`<video>`和`<audio>`嵌入的媒体
+- 使用`<object>`和`<embed>`嵌入的其他资源
 - 使用@font-face引入的字体。规范要求字体请求必须使用相当于crossorigin="anonymous"的跨源模式，跨源的字体响应要设置合适的Access-Control-Allow-Origin首部 
-- 使用<iframe>嵌入的所有资源。站点可使用[X-Frame-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)响应首部以阻止跨源框架
+- 使用`<iframe>`嵌入的所有资源。站点可使用[X-Frame-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)响应首部以阻止跨源框架
 
 在同源策略的限制下，浏览器将拒绝读取跨源资源的内部信息（更多限制参见crossorigin属性）。为此，我们需要使用跨源资源共享（CORS）。
 
@@ -46,7 +46,7 @@ Same-origin policy，即同源策略  ，是浏览器的一个安全机制，用
 - WebGL纹理
 - 在canvas中使用drawImage()绘制的图像或视频帧
 - 来源于图像的CSS Shapes
-- 可使用crossorigin属性的<img>、<link>、<audio>、<video>、<track>、<script>等元素
+- 可使用crossorigin属性的`<img>`、`<link>`、`<audio>`、`<video>`、`<track>`、`<script>`等元素
 - [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)接口
 
 ### 简单请求
@@ -95,11 +95,11 @@ Same-origin policy，即同源策略  ，是浏览器的一个安全机制，用
 
 **Access-Control-Allow-Origin**
 
-可取值为*、<origin>、null。
+可取值为*、`<origin>`、null。
 
 取值为*时，允许任意源访问资源。但请求不能带凭据，否则会发生错误。
 
-取值为<origin>时，只能声明一个源。并且响应还应带上Vary首部，取值为Origin，以表明服务器响应可能会根据源的不同而不同。
+取值为`<origin>`时，只能声明一个源。并且响应还应带上Vary首部，取值为Origin，以表明服务器响应可能会根据源的不同而不同。
 
 null应避免使用。乍看之下，null似乎不允许任何源访问资源，但对于使用 data:或file:协议的源以及沙盒中的文档，其Origin均会被解析为null，很多用户代理也允许这样的文档访问Access-Control-Allow-Origin为null的响应。Origin为null的文档可以是恶意文档，因此不应使用null值。
 

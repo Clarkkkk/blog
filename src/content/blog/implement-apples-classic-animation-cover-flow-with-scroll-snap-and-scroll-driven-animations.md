@@ -9,13 +9,12 @@ draft: false
 tags:
     - temp
 ---
-# 用scroll snap和scroll-driven animations实现苹果的经典动画cover flow
 
 今年CSS多了很多新特性，很多以前实现起来效率很差的界面效果借助新特性都能流畅实现。比如前不久Chrome在[115版本](https://x.com/ChromiumDev/status/1679641868861157379?s=20)中带来了滚动驱动的动画（scroll-driven animations）。这个功能使得我们可以在不借助JavaScript的情况下实现随滚动播放的动画。
 
 这篇文章我将用滚动驱动的动画和CSS Scroll Snap等特性实现cover flow动画。Cover flow最早在iTunes中出现，后来被引入至iPod、iPhone等设备中，是苹果交互设计的经典之作。
 
-![iPod-nano-5G-Cover-Flow-Playback-Demo.2018-10-18-10_46_36](C:\Users\iouio\OneDrive\文档\Markdown\用scroll snap和scroll-driven animations实现苹果的经典动画cover flow.assets\iPod-nano-5G-Cover-Flow-Playback-Demo.2018-10-18-10_46_36.gif)
+![iPod-nano-5G-Cover-Flow-Playback-Demo.2018-10-18-10_46_36](./implement-apples-classic-animation-cover-flow-with-scroll-snap-and-scroll-driven-animations/iPod-nano-5G-Cover-Flow-Playback-Demo.2018-10-18-10_46_36.gif)
 
 为方便起见，这篇文章使用React作为前端框架，但代码并不与React强相关。
 
@@ -60,7 +59,7 @@ export const Coverflow = () => {
 
 这样就得到了一个可以横向滚动的图片列表：
 
-![image-20230922224001294](C:\Users\iouio\OneDrive\文档\Markdown\用scroll snap和scroll-driven animations实现苹果的经典动画cover flow.assets\image-20230922224001294.png)
+![image-20230922224001294](./implement-apples-classic-animation-cover-flow-with-scroll-snap-and-scroll-driven-animations/image-20230922224001294.png)
 
 为了实现滚动驱动的动画，我们需要用到几个新加入的CSS属性，`animation-timeline`，`scroll-timeline`，`animation-range`等。
 
@@ -95,7 +94,7 @@ export const Coverflow = () => {
 
 `view(x)`表示滚动方向是横向，动画的时间线是滚动容器的可视区域。效果如图：
 
-![coverflow-1](C:\Users\iouio\OneDrive\文档\Markdown\用scroll snap和scroll-driven animations实现苹果的经典动画cover flow.assets\coverflow-1.gif)
+![coverflow-1](./implement-apples-classic-animation-cover-flow-with-scroll-snap-and-scroll-driven-animations/coverflow-1.gif)
 
 看起来已经有雏形了。
 
@@ -120,7 +119,7 @@ export const Coverflow = () => {
 }
 ```
 
-![coverflow-2](C:\Users\iouio\OneDrive\文档\Markdown\用scroll snap和scroll-driven animations实现苹果的经典动画cover flow.assets\coverflow-2.gif)
+![coverflow-2](./implement-apples-classic-animation-cover-flow-with-scroll-snap-and-scroll-driven-animations/coverflow-2.gif)
 
 这样动画范围算是正确了。但是大家也能看到，图片的形变太大；图片之间距离太远；而且右边的图片空间关系不对，左边一点的图片应该叠在右边一点的图片上面。因此我们一次性调整一下CSS。
 
@@ -211,7 +210,7 @@ export const Coverflow = () => {
 
 经过调整以后的效果如图：
 
-![coverflow-3](C:\Users\iouio\OneDrive\文档\Markdown\用scroll snap和scroll-driven animations实现苹果的经典动画cover flow.assets\coverflow-3.gif)
+![coverflow-3](./implement-apples-classic-animation-cover-flow-with-scroll-snap-and-scroll-driven-animations/coverflow-3.gif)
 
 看起来比之前好多了。
 
@@ -258,13 +257,13 @@ export const Coverflow = () => {
 
 `scroll-snap-type: x mandatory`表示在横向上应用贴合滚动。`scroll-snap-align: center`表示贴合的边线是元素的中线，`scroll-snap-stop: always`表示在一次滚动中不能跨过超过一个元素，每一个元素都应该停留。
 
-![coverflow-4](C:\Users\iouio\OneDrive\文档\Markdown\用scroll snap和scroll-driven animations实现苹果的经典动画cover flow.assets\coverflow-4.gif)
+![coverflow-4](./implement-apples-classic-animation-cover-flow-with-scroll-snap-and-scroll-driven-animations/coverflow-4.gif)
 
 现在，随意地滚动后，界面也会刚好停在某一张图片上了。
 
 最后，加上倒影和专辑文字就大功告成了。这部分就不赘述了，直接看最终效果。
 
-![coverflow-5](C:\Users\iouio\OneDrive\文档\Markdown\用scroll snap和scroll-driven animations实现苹果的经典动画cover flow.assets\coverflow-5.gif)
+![coverflow-5](./implement-apples-classic-animation-cover-flow-with-scroll-snap-and-scroll-driven-animations/coverflow-5.gif)
 
 看起来还不错吧？
 

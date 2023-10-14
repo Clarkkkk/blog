@@ -15,7 +15,7 @@ tags:
 
 ### Cross-Origin Read Blocking
 
-Cross-Origin Read Blocking（下称CORB）不是一个HTTP首部，而是站点隔离机制的一部分 。如上文所说，站点隔离可以让不同站点运行在不同进程中，但这样还不够，因为恶意网站仍然可以合法地请求跨源资源。例如，一个恶意网站可以使用一个<img>元素来请求含有敏感信息（如银行余额）的JSON文件：
+Cross-Origin Read Blocking（下称CORB）不是一个HTTP首部，而是站点隔离机制的一部分 。如上文所说，站点隔离可以让不同站点运行在不同进程中，但这样还不够，因为恶意网站仍然可以合法地请求跨源资源。例如，一个恶意网站可以使用一个`<img>`元素来请求含有敏感信息（如银行余额）的JSON文件：
 
 ```
 <img src="https://your-bank.example/balance.json">
@@ -27,17 +27,17 @@ CORB正是用于阻止这样的访问。如果一个响应被CORB阻止，这个
 
 CORB不会检视以下两类请求：
 
-- 导航请求或各种嵌入请求，例如跨源的<iframe>、<object>、<embed>等。这些嵌入元素本身就有一个独立的安全上下文，在站点隔离的帮助下，其数据与恶意文档的数据分别存于不同进程中，已经足够安全
+- 导航请求或各种嵌入请求，例如跨源的`<iframe>`、`<object>`、`<embed>`等。这些嵌入元素本身就有一个独立的安全上下文，在站点隔离的帮助下，其数据与恶意文档的数据分别存于不同进程中，已经足够安全
 - 下载请求，这类请求的响应数据直接储存至硬盘，不会经过跨源文档的上下文，不需要CORB保护
 
 CORB会检视其余的请求，包括：
 
 - XHR和fetch()
 - ping，navigator.sendBeacon()
-- <link rel="prefetch" ...>
+- `<link rel="prefetch" ...>`
 - 以下资源的请求：
-- 图像请求，如<img>元素，网站图标/favicon.ico，SVG中的<image>，CSS中的background-image等等
-- 脚本请求，如<script>、importScripts()、navigator.serviceWorker.register()、audioWorklet.addModule()等等
+- 图像请求，如`<img>`元素，网站图标/favicon.ico，SVG中的`<image>`，CSS中的background-image等等
+- 脚本请求，如`<script>`、importScripts()、navigator.serviceWorker.register()、audioWorklet.addModule()等等
 - 音频、视频和字幕请求
 - 字体请求
 - 样式请求
@@ -85,9 +85,9 @@ Cross-Origin-Embedder-Policy是一个响应首部，只有两个取值，require
 
 将COEP声明为require-corp表示响应需要显式声明Cross-Origin-Resource-Policy: cross-origin以允许跨域加载资源；若未声明Cross-Origin-Resource-Policy首部，则将其当作same-origin。
 
-此外，COEP也扩展了CORP的能力，让CORP能够处理由<iframe>或window.open()等产生的跨源导航请求。也就是说，在启用COEP的情况下，若文档未声明Cross-Origin-Resource-Policy: cross-origin，不可以使用<iframe>或window.open()嵌入该文档。
+此外，COEP也扩展了CORP的能力，让CORP能够处理由`<iframe>`或window.open()等产生的跨源导航请求。也就是说，在启用COEP的情况下，若文档未声明Cross-Origin-Resource-Policy: cross-origin，不可以使用`<iframe>`或window.open()嵌入该文档。
 
-细心的读者可能会发现，上文不是提到跨源的<iframe>、<object>、<embed>等嵌入元素储存在独立进程中吗？为什么还需要使用COEP禁用跨源嵌入框架？因为实现OOPIFs（即Out-of-Process iframes）会显著增加浏览器的内存使用，并非所有浏览器都有实现计划（如为低内存手机设计的浏览器等）  。而没有相关实现的浏览器可能会在同一进程中加载框架。
+细心的读者可能会发现，上文不是提到跨源的`<iframe>`、`<object>`、`<embed>`等嵌入元素储存在独立进程中吗？为什么还需要使用COEP禁用跨源嵌入框架？因为实现OOPIFs（即Out-of-Process iframes）会显著增加浏览器的内存使用，并非所有浏览器都有实现计划（如为低内存手机设计的浏览器等）  。而没有相关实现的浏览器可能会在同一进程中加载框架。
 
 需要注意，Cross-Origin-Embedder-Policy: require-corp会递归地对所有子资源和框架生效。也就是说，如果文档嵌入了一个启用了COEP的文档，那么这个子文档中的所有跨源资源也同样需要启用COEP（或CORS）。为了实现跨源隔离，这样的递归生效是必要的，详见下文。
 
