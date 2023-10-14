@@ -1,13 +1,8 @@
-# Ignore everything
-/*
-
-# Except these files & folders
-!/src
-!/public
-!/.github
-!tsconfig.json
-!astro.config.ts
-!package.json
-!.prettierrc
-!.eslintrc.js
-!README.md
+.history
+.husky
+.vscode
+*.md
+pnpm-lock.yaml
+coverage
+dist
+node_modules
