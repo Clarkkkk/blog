@@ -2,12 +2,13 @@
 title: transform-style preserve-3d会被overflow等属性影响，重置为transform-style flat
 author: Aaron Zhou
 description: transform-style preserve-3d会被overflow等属性影响，重置为transform-style flat
-pubDatetime: 2023-10-13T17:49:36.498Z
+pubDatetime: 2023-09-22T20:01:00.000Z
 postSlug: transform-style-preserve-3d-will-be-reset-to-transform-style-flat-due-to-properties-such-as-overflow
 featured: false
 draft: false
 tags:
-    - temp
+    - CSS
+    - 踩坑记录
 ---
 transform-style用于设置是否将子元素放在三维空间内。transform-style: preserve-3d表示将子元素放进三维空间，渲染时会计算各个子元素在三维空间中的关系，比如各种遮盖、交错等空间关系，像这样：
 

@@ -2,12 +2,13 @@
 title: mouseleave 和 mouseout 的区别
 author: Aaron Zhou
 description: mouseleave 和 mouseout 的区别
-pubDatetime: 2023-10-13T17:49:35.818Z
+pubDatetime: 2020-05-25T23:19:00.000Z
 postSlug: the-difference-between-mouseleave-and-mouseout
 featured: false
 draft: false
 tags:
-    - temp
+    - 笔记
+    - DOM
 ---
 mouseleave 和 mouseout 均在离开相应元素的 border box 时被触发。
 

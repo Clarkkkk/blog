@@ -2,12 +2,13 @@
 title: 跨源相关机制综述（三）：crossorigin属性
 author: Aaron Zhou
 description: 跨源相关机制综述（三）：crossorigin属性
-pubDatetime: 2023-10-13T17:52:18.165Z
+pubDatetime: 2021-01-21T01:16:00.000Z
 postSlug: review-of-cross-source-correlation-mechanisms-iii--crossorigin-attributes
 featured: false
 draft: false
 tags:
-    - temp
+    - 笔记
+    - HTML
 ---
 如前文所述，一些元素允许跨源嵌入，但同源策略保护跨源读取，不允许JavaScript读取其内部信息。声明crossorigin属性可为元素启用CORS，并定义凭据模式。当然，相应的请求和相应也需要使用正确的CORS首部。可使用crossorigin属性的元素包括`<img>`、`<link>`、`<audio>`、`<video>`、`<script>`等。
 
@@ -17,7 +18,7 @@ tags:
 
 `<img>`：在canvas中使用drawImage()绘制图像时，若传入未声明crossorigin属性的跨源`<img>`元素，会使canvas变成污染状态（tainted），此时任何读取canvas数据的操作，如getImageData()、toDataURL()、toBlob()等，均会抛出错误。
 
-`<audio>`和`<video>`：任何可能暴露内容信息的操作都需要设置crossorigin属性，如Web Audio API、在`<canvas>`或WebGL中使用`<audio>`或`<video>`元素等。此外，根据规范，用于嵌入字幕的`<track>`元素的跨源状态继承自其父元素`<audio>`或`<video>`的crossorigin属性 （以防止字幕内容泄露 ）。
+`<audio>`和`<video>`：任何可能暴露内容信息的操作都需要设置crossorigin属性，如Web Audio API、在`<canvas>`或WebGL中使用`<audio>`或`<video>`元素等。此外，根据规范，用于嵌入字幕的`<track>`元素的跨源状态继承自其父元素`<audio>`或`<video>`的crossorigin属性 （以防止字幕内容泄露）。
 
 `<script>`：对于跨源的传统脚本（未声明type=module的脚本），若未声明crossorigin属性，在发生错误时，window.onerror中不会收到详细的错误信息，仅有类似“Script error”这样的简单提示。这样做是因为，即使是错误信息，也有可能暴露用户状态。
 
@@ -35,7 +36,7 @@ crossorigin可取的值有两个，anonymous和use-credentials。大部分可使
 
 ### 几个特例
 
-实际上，上述默认算法在一些时候并非最佳实践（如默认发送凭据的行为可被CSRF攻击利用 ），只是为了向后兼容而妥协。设计新的元素类型时，规范制定者才得以抛下历史包袱重新考虑。
+实际上，上述默认算法在一些时候并非最佳实践（如默认发送凭据的行为可被CSRF攻击利用），只是为了向后兼容而妥协。设计新的元素类型时，规范制定者才得以抛下历史包袱重新考虑。
 
 ### 模块脚本
 

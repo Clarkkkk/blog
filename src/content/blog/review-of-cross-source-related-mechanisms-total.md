@@ -2,12 +2,15 @@
 title: 跨源相关机制综述（总）
 author: Aaron Zhou
 description: 跨源相关机制综述（总）
-pubDatetime: 2023-10-13T17:52:20.367Z
+pubDatetime: 2021-01-18T00:15:00.000Z
 postSlug: review-of-cross-source-related-mechanisms-total
 featured: false
 draft: false
 tags:
-    - temp
+    - 笔记
+    - HTTP
+    - HTML
+    - JavaScript
 ---
 在前端开发中，常常会遇到所谓的“跨域”问题。其实跨域并不准确，因为跨端口或者跨协议也会遇到相同的问题。准确的称呼是跨源（cross origin）。本系列文章将讲述关于跨源的方方面面，并尽可能地厘清相关机制的设计初衷、各机制的局限性及相应的演变等。
 

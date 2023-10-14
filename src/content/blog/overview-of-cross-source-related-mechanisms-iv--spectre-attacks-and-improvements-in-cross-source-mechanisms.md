@@ -2,12 +2,15 @@
 title: 跨源相关机制综述（四）：Spectre攻击与跨源机制的改进
 author: Aaron Zhou
 description: 跨源相关机制综述（四）：Spectre攻击与跨源机制的改进
-pubDatetime: 2023-10-13T17:52:19.807Z
+pubDatetime: 2021-08-04T00:28:00.000Z
 postSlug: overview-of-cross-source-related-mechanisms-iv--spectre-attacks-and-improvements-in-cross-source-mechanisms
 featured: false
 draft: false
 tags:
-    - temp
+    - 笔记
+    - HTTP
+    - HTML
+    - JavaScript
 ---
 在2018年，Google的Project Zero团队和其他安全人员相继发现了一个影响世界上绝大多数CPU的安全漏洞，Spectre。这个漏洞允许一个进程读取其本不允许读取的内存数据。这也使得浏览器变得不安全，因为在浏览器中，不同网站的不同文档可以在同一进程中运行。恶意网站可能会利用这个漏洞读取用户在其他网站上的信息。为此，Google、Mozilla等浏览器厂商做了很多工作来预防这类问题，其中也包括对跨源机制的改进。
 

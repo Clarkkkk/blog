@@ -2,12 +2,13 @@
 title: CSS书写模式（Writing Mode）
 author: Aaron Zhou
 description: CSS书写模式（Writing Mode）
-pubDatetime: 2023-10-13T17:49:35.071Z
+pubDatetime: 2020-03-04T23:13:00.000Z
 postSlug: css-writing-mode
 featured: false
 draft: false
 tags:
-    - temp
+    - 笔记
+    - CSS
 ---
 *本文原载于*[*24ways*](https://24ways.org/2016/css-writing-modes/)*，作者为*[*Jen Simmons*](https://24ways.org/2016/css-writing-modes/#author)*，未经许可，禁止转载。*
 

@@ -2,12 +2,15 @@
 title: 跨源相关机制综述（一）：同源策略与跨源资源共享
 author: Aaron Zhou
 description: 跨源相关机制综述（一）：同源策略与跨源资源共享
-pubDatetime: 2023-10-13T17:49:37.176Z
+pubDatetime: 2021-01-18T00:17:00.000Z
 postSlug: review-of-cross-source-correlation-mechanism-1--homologous-policy-and-cross-source-resource-sharing
 featured: false
 draft: false
 tags:
-    - temp
+    - 笔记
+    - HTTP
+    - HTML
+    - JavaScript
 ---
 ## Same-origin policy
 
@@ -54,7 +57,7 @@ Same-origin policy，即同源策略  ，是浏览器的一个安全机制，用
 所谓简单请求，就是不需要预请求（preflight request）的请求，需要满足以下所有条件：
 
 - 请求方法为GET、HEAD或POST
-- 除用户代理自动设置的首部（如Connection、User-Agent及规范中定义的禁用首部 ）外，只有这些首部（即CORS-safelisted request header ）可自定义：Accept、Accept-Language、Content-Language、Content-Type 
+- 除用户代理自动设置的首部（如Connection、User-Agent及规范中定义的禁用首部）外，只有这些首部（即CORS-safelisted request header）可自定义：Accept、Accept-Language、Content-Language、Content-Type 
 - 其中Content-Type只可以取这些值：application/x-www-form-urlencoded、multipart/form-data、text/plain
 - XMLHttpRequestUpload对象上没有注册任何事件监听器（这个对象通过XMLHttpRequest.upload属性 访问）
 - 请求中没有使用任何ReadableStream对象 
@@ -123,7 +126,7 @@ CORS-safelisted request header（即Accept、Accept-Language、Content-Language�
 
 **Access-Control-Expose-Headers**
 
-Access-Control-Expose-Headers是响应首部，用于将首部暴露给浏览器。默认情况下，只有7个响应首部（称为CORS-safelisted response header ）可以直接通过JavaScript访问  ：
+Access-Control-Expose-Headers是响应首部，用于将首部暴露给浏览器。默认情况下，只有7个响应首部（称为CORS-safelisted response header）可以直接通过JavaScript访问  ：
 
 - Cache-Control 
 - Content-Language 

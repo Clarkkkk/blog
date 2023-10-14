@@ -2,12 +2,14 @@
 title: IDL 属性与内容属性、布尔值属性与枚举属性傻傻分不清楚？
 author: Aaron Zhou
 description: IDL 属性与内容属性、布尔值属性与枚举属性傻傻分不清楚？
-pubDatetime: 2023-10-13T17:49:35.458Z
+pubDatetime: 2020-06-01T16:14:00.000Z
 postSlug: idl-attribute-and-content-attribute-boolean-value-attribute-and-enumeration-attribute-are-not-clear
 featured: false
 draft: false
 tags:
-    - temp
+    - 笔记
+    - HTML
+    - JavaScript
 ---
 开始之前，先看几个问题：
 

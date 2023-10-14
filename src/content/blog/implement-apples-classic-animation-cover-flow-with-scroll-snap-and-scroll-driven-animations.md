@@ -2,12 +2,13 @@
 title: 用scroll snap和scroll-driven animations实现苹果的经典动画cover flow
 author: Aaron Zhou
 description: 用scroll snap和scroll-driven animations实现苹果的经典动画cover flow
-pubDatetime: 2023-10-13T17:53:48.174Z
+pubDatetime: 2023-09-23T18:44:00.000Z
 postSlug: implement-apples-classic-animation-cover-flow-with-scroll-snap-and-scroll-driven-animations
 featured: false
 draft: false
 tags:
-    - temp
+    - 笔记
+    - CSS
 ---
 
 今年CSS多了很多新特性，很多以前实现起来效率很差的界面效果借助新特性都能流畅实现。比如前不久Chrome在[115版本](https://x.com/ChromiumDev/status/1679641868861157379?s=20)中带来了滚动驱动的动画（scroll-driven animations）。这个功能使得我们可以在不借助JavaScript的情况下实现随滚动播放的动画。
