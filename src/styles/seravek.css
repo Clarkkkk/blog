@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'seravek';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/seravek.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'seravek';
+    font-weight: 500;
+    font-style: normal;
+    src: url('../fonts/seravek-medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'seravek';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/seravek-bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'seravek';
+    font-weight: 300;
+    font-style: normal;
+    src: url('../fonts/seravek-light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'seravek';
+    font-weight: 200;
+    font-style: normal;
+    src: url('../fonts/seravek-extralight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'seravek';
+    font-weight: 400;
+    font-style: italic;
+    src: url('../fonts/seravek-italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'seravek';
+    font-weight: 500;
+    font-style: italic;
+    src: url('../fonts/seravek-medium-italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'seravek';
+    font-weight: 700;
+    font-style: italic;
+    src: url('../fonts/seravek-bold-italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'seravek';
+    font-weight: 300;
+    font-style: italic;
+    src: url('../fonts/seravek-light-italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'seravek';
+    font-weight: 200;
+    font-style: italic;
+    src: url('../fonts/seravek-extralight-italic.ttf') format('truetype');
+}
