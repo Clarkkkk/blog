@@ -24,13 +24,25 @@ export default function Card({ href, frontmatter, secHeading = true, body }: Pro
     }
 
     useEffect(() => {
+        const textArr = body.split('\n')
+        let rawText = ''
+        for (const textFragment of textArr) {
+            rawText += '\n' + textFragment
+            if (rawText.length > 100) {
+                break
+            }
+        }
         unified()
             .use(remarkParse)
             .use(remarkRehype)
             .use(rehypeStringify)
-            .process(body.slice(0, 120) + '...')
+            .process(rawText)
             .then((file) => {
-                setBodyText(String(file))
+                const text = String(file).replace(
+                    /[。，“”（）《》`「」『』：](<\/[^<>]+>)$/,
+                    '……$1'
+                )
+                setBodyText(text)
             })
     }, [])
 
