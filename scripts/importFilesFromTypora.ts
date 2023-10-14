@@ -24,7 +24,9 @@ async function parseMarkdownFiles() {
                 const asciiName = await parseFileName(file.replace('.md', ''))
                 if (!asciiName || /[^\x20-\x7F]/g.test(asciiName)) {
                     hasException = true
+                    // eslint-disable-next-line no-console
                     console.log('Parsed name not valid')
+                    // eslint-disable-next-line no-console
                     console.log({ file, asciiName })
                     return
                 }
@@ -138,7 +140,9 @@ async function parseFileName(fileName: string) {
             }
         })
         if (!data.translation || data.errorCode !== '0') {
+            // eslint-disable-next-line no-console
             console.log('translation error')
+            // eslint-disable-next-line no-console
             console.log(data)
             return ''
         }
