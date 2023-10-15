@@ -7,6 +7,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 export type SearchItem = {
     title: string
     description: string
+    tags: string[]
     data: CollectionEntry<'blog'>['data']
 }
 
@@ -31,7 +32,7 @@ export default function SearchBar({ searchList }: Props) {
     const fuse = useMemo(
         () =>
             new Fuse(searchList, {
-                keys: ['title', 'description'],
+                keys: ['title', 'description', 'tags'],
                 includeMatches: true,
                 minMatchCharLength: 2,
                 threshold: 0.5
@@ -98,7 +99,7 @@ export default function SearchBar({ searchList }: Props) {
             </label>
 
             {inputVal.length > 1 && (
-                <div className="mt-8">
+                <div className="mt-2">
                     Found {searchResults?.length}
                     {searchResults?.length && searchResults?.length === 1
                         ? ' result'
@@ -107,7 +108,7 @@ export default function SearchBar({ searchList }: Props) {
                 </div>
             )}
 
-            <ul>
+            <ul className="mt-8">
                 {searchResults &&
                     searchResults.map(({ item, refIndex }) => (
                         <Card

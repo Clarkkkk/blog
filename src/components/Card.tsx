@@ -1,50 +1,20 @@
 import { slugifyStr } from '@utils/slugify'
 import type { CollectionEntry } from 'astro:content'
-import { useEffect, useState } from 'react'
-import rehypeStringify from 'rehype-stringify'
-import remarkParse from 'remark-parse'
-import remarkRehype from 'remark-rehype'
-import { unified } from 'unified'
 import Datetime from './Datetime'
 
 export interface Props {
     href?: string
     frontmatter: CollectionEntry<'blog'>['data']
-    body: CollectionEntry<'blog'>['body']
     secHeading?: boolean
 }
 
-export default function Card({ href, frontmatter, secHeading = true, body }: Props) {
-    const [bodyText, setBodyText] = useState('')
+export default function Card({ href, frontmatter, secHeading = true }: Props) {
     const { title, pubDatetime } = frontmatter
 
     const headerProps = {
         style: { viewTransitionName: slugifyStr(title) },
         className: 'text-lg font-medium decoration-dashed hover:underline'
     }
-
-    useEffect(() => {
-        const textArr = body.split('\n')
-        let rawText = ''
-        for (const textFragment of textArr) {
-            rawText += '\n' + textFragment
-            if (rawText.length > 100) {
-                break
-            }
-        }
-        unified()
-            .use(remarkParse)
-            .use(remarkRehype)
-            .use(rehypeStringify)
-            .process(rawText)
-            .then((file) => {
-                const text = String(file).replace(
-                    /[。，“”（）《》`「」『』：](<\/[^<>]+>)$/,
-                    '……$1'
-                )
-                setBodyText(text)
-            })
-    }, [])
 
     return (
         <li className="mb-12">
@@ -55,10 +25,6 @@ export default function Card({ href, frontmatter, secHeading = true, body }: Pro
                 {secHeading ? <h2 {...headerProps}>{title}</h2> : <h3 {...headerProps}>{title}</h3>}
             </a>
             <Datetime datetime={pubDatetime} />
-            <p
-                className="mt-2 max-w-3xl text-sm"
-                dangerouslySetInnerHTML={{ __html: bodyText }}
-            />
         </li>
     )
 }

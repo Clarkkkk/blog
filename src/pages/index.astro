@@ -5,7 +5,7 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
-import Card from "@components/Card";
+import Card from "@components/ArticleCard.astro";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import slugify from "@utils/slugify";
@@ -87,7 +87,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             .map(
               ({ data, body }) => {
                 return <Card
-                    client:load
                     href={`/blog/posts/${slugify(data)}`}
                     frontmatter={data}
                     secHeading={false}

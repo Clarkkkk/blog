@@ -1,0 +1,61 @@
+---
+import { slugifyStr } from '@utils/slugify'
+import type { CollectionEntry } from 'astro:content'
+import rehypeStringify from 'rehype-stringify'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import { unified } from 'unified'
+import Datetime from './Datetime'
+
+export interface Props {
+    href?: string
+    frontmatter: CollectionEntry<'blog'>['data']
+    body: CollectionEntry<'blog'>['body']
+    secHeading?: boolean
+}
+
+const { href, frontmatter, secHeading = true, body } = Astro.props;
+const { title, pubDatetime } = frontmatter
+
+const headerProps = {
+    style: { viewTransitionName: slugifyStr(title) },
+    className: 'text-lg font-medium decoration-dashed hover:underline'
+}
+
+async function getArticlePartial() {
+    const textArr = body.split('\n')
+    let rawText = ''
+    for (const textFragment of textArr) {
+        rawText += '\n' + textFragment
+        if (rawText.length > 100) {
+            break
+        }
+    }
+    const parseResult = await unified()
+        .use(remarkParse)
+        .use(remarkRehype)
+        .use(rehypeStringify)
+        .process(rawText)
+    const text = String(parseResult).replace(
+        /[。，“”（）《》`「」『』：](<\/[^<>]+>)$/,
+        '……$1'
+    )
+    return text
+}
+
+const bodyText = await getArticlePartial()
+---
+
+<li class="mb-12">
+    <a
+        href={href}
+        class="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+    >
+        {secHeading ? <h2 {...headerProps}>{title}</h2> : <h3 {...headerProps}>{title}</h3>}
+    </a>
+    <Datetime datetime={pubDatetime} />
+    <p
+        class="mt-2 max-w-3xl text-sm"
+        set:html={bodyText}
+    />
+</li>
