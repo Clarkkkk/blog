@@ -1,0 +1,26 @@
+diff --git a/dist/index.cjs b/dist/index.cjs
+index 3d3216033c187b7042d359629c2e283078e4773b..09297afe51dd628198c3f22cddbc65995f600710 100644
+--- a/dist/index.cjs
++++ b/dist/index.cjs
+@@ -91,7 +91,7 @@ function getViteConfiguration(config, options, enableManifestTransform) {
+       registerType,
+       injectRegister
+     };
+-    if (!useWorkbox.navigateFallback)
++    if (useWorkbox.navigateFallback === undefined)
+       useWorkbox.navigateFallback = config.base ?? config.vite?.base ?? "/";
+     newOptions.workbox = useWorkbox;
+     newOptions.workbox.manifestTransforms = newOptions.workbox.manifestTransforms ?? [];
+diff --git a/dist/index.mjs b/dist/index.mjs
+index ed6083003d33271a3945e1cd90f84eecb7099337..fcaefc81d7cc6ac09330c16d73981dbe925320b7 100644
+--- a/dist/index.mjs
++++ b/dist/index.mjs
+@@ -89,7 +89,7 @@ function getViteConfiguration(config, options, enableManifestTransform) {
+       registerType,
+       injectRegister
+     };
+-    if (!useWorkbox.navigateFallback)
++    if (useWorkbox.navigateFallback === undefined)
+       useWorkbox.navigateFallback = config.base ?? config.vite?.base ?? "/";
+     newOptions.workbox = useWorkbox;
+     newOptions.workbox.manifestTransforms = newOptions.workbox.manifestTransforms ?? [];

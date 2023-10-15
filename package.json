@@ -91,5 +91,10 @@
         "*.{js,jsx,ts,tsx,md,mdx,json}": [
             "prettier --plugin-search-dir=. --write"
         ]
+    },
+    "pnpm": {
+        "patchedDependencies": {
+            "@vite-pwa/astro@0.1.3": "patches/@vite-pwa__astro@0.1.3.patch"
+        }
     }
 }

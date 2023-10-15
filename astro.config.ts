@@ -58,7 +58,7 @@ export default defineConfig({
                 skipWaiting: true,
                 clientsClaim: true,
                 // only precache the root index and critical assets (base.css is bundled into about.[hash].css)
-                globPatterns: ['{**/{hoisted,client,about}*.{js,css},index.html}'],
+                globPatterns: ['**/{hoisted,client,about}*.{js,css}'],
                 maximumFileSizeToCacheInBytes: 50 * 1000 * 1000,
                 sourcemap: false,
                 navigateFallback: null,
