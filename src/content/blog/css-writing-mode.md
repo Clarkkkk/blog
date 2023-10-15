@@ -7,7 +7,7 @@ postSlug: css-writing-mode
 featured: false
 draft: false
 tags:
-    - 笔记
+    - 翻译
     - CSS
 ---
 *本文原载于*[*24ways*](https://24ways.org/2016/css-writing-modes/)*，作者为*[*Jen Simmons*](https://24ways.org/2016/css-writing-modes/#author)*，未经许可，禁止转载。*
