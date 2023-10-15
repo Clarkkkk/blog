@@ -57,18 +57,17 @@ export default defineConfig({
             workbox: {
                 skipWaiting: true,
                 clientsClaim: true,
-                globPatterns: ['**/{index,hoisted,client}*.{js,css}'],
-                globIgnores: ['**/*.html', '**/*.webmanifest'],
+                globPatterns: ['**/{index,hoisted,client}*.{js,css,html}'],
                 maximumFileSizeToCacheInBytes: 50 * 1000 * 1000,
                 sourcemap: false,
-                navigateFallback: '/blog/404',
+                navigateFallback: null,
                 cleanupOutdatedCaches: true,
                 runtimeCaching: [
                     {
-                        urlPattern: /^https:\/\/aaroon.me\/blog.*\.(js|css|ttf)$/i,
+                        urlPattern: /\.(js|css|ttf)$/i,
                         handler: 'CacheFirst',
                         options: {
-                            cacheName: 'app-shell',
+                            cacheName: 'app-resources',
                             cacheableResponse: {
                                 statuses: [200]
                             },
