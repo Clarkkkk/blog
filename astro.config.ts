@@ -58,7 +58,7 @@ export default defineConfig({
                 skipWaiting: true,
                 clientsClaim: true,
                 // only precache the root index and critical assets (base.css is bundled into about.[hash].css)
-                globPatterns: ['**/{hoisted,client,about}*.{js,css}'],
+                globPatterns: ['{**/{hoisted,client,about}*.{js,css},index.html}'],
                 maximumFileSizeToCacheInBytes: 50 * 1000 * 1000,
                 sourcemap: false,
                 navigateFallback: null,
@@ -87,6 +87,20 @@ export default defineConfig({
                             },
                             expiration: {
                                 maxAgeSeconds: 60 * 24 * 60 * 60,
+                                maxEntries: 100
+                            }
+                        }
+                    },
+                    {
+                        urlPattern: /\.html$/i,
+                        handler: 'StaleWhileRevalidate',
+                        options: {
+                            cacheName: 'app-documents',
+                            cacheableResponse: {
+                                statuses: [200]
+                            },
+                            expiration: {
+                                maxAgeSeconds: 30 * 24 * 60 * 60,
                                 maxEntries: 100
                             }
                         }
