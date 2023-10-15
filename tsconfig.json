@@ -13,6 +13,6 @@
             "@styles/*": ["styles/*"],
             "@utils/*": ["utils/*"]
         },
-        "types": ["vite-plugin-pwa/client"]
+        "types": ["vite-plugin-pwa/client", "vite-plugin-pwa/info"]
     }
 }
