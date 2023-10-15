@@ -57,10 +57,11 @@ export default defineConfig({
             workbox: {
                 skipWaiting: true,
                 clientsClaim: true,
-                globPatterns: ['**/{404,hoisted,client}*.{js,css,html}'],
+                // only precache the root index and critical assets (base.css is bundled into about.[hash].css)
+                globPatterns: ['{**/{hoisted,client,about}*.{js,css},index.html}'],
                 maximumFileSizeToCacheInBytes: 50 * 1000 * 1000,
                 sourcemap: false,
-                navigateFallback: '/blog/404',
+                navigateFallback: null,
                 cleanupOutdatedCaches: true,
                 runtimeCaching: [
                     {
