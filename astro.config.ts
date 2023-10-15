@@ -90,20 +90,6 @@ export default defineConfig({
                                 maxEntries: 100
                             }
                         }
-                    },
-                    {
-                        urlPattern: /\.html$/i,
-                        handler: 'StaleWhileRevalidate',
-                        options: {
-                            cacheName: 'app-documents',
-                            cacheableResponse: {
-                                statuses: [200]
-                            },
-                            expiration: {
-                                maxAgeSeconds: 30 * 24 * 60 * 60,
-                                maxEntries: 100
-                            }
-                        }
                     }
                 ]
             }
