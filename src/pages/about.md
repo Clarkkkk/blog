@@ -27,5 +27,5 @@ title: "About"
 如果你想提出自己的想法，欢迎在[这里](https://github.com/Clarkkkk/blog/issues)提交issue，或者通过[电子邮件](mailto:clark1729@outlook.com)与我交流。
 
 <div class="mt-24 sm:mt-36">
-  <img src="/assets/alalei.png" class="w-48 sm:w-60 mx-auto about-image" alt="阿拉蕾，是日本漫画家鸟山明创作的著名角色">
+  <img src="/blog/assets/alalei.png" class="w-48 sm:w-60 mx-auto about-image" alt="阿拉蕾，是日本漫画家鸟山明创作的著名角色">
 </div>
