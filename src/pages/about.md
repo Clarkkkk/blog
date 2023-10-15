@@ -3,7 +3,7 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-这个博客使用Astro搭建，样式风格从AstroPaper发展而来。
+此博客使用Astro搭建，样式风格从[AstroPaper](https://github.com/satnaing/astro-paper)发展而来。
 
 ## 技术栈
 
@@ -15,6 +15,8 @@ title: "About"
 
 ## 特点
 
+- PWA
+- Lighthouse满分
 - 响应式布局
 - 无障碍
 - SEO友好
