@@ -57,10 +57,10 @@ export default defineConfig({
             workbox: {
                 skipWaiting: true,
                 clientsClaim: true,
-                globPatterns: ['**/{index,hoisted,client}*.{js,css,html}'],
+                globPatterns: ['**/{404,hoisted,client}*.{js,css,html}'],
                 maximumFileSizeToCacheInBytes: 50 * 1000 * 1000,
                 sourcemap: false,
-                navigateFallback: null,
+                navigateFallback: '/blog/404',
                 cleanupOutdatedCaches: true,
                 runtimeCaching: [
                     {
