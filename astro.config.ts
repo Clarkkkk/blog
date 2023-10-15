@@ -25,7 +25,8 @@ export default defineConfig({
                 short_name: "Aaron's Blog",
                 description: 'Blogs about everything in frontend development',
                 start_url: 'index.html',
-                scope: '/blog/',
+                id: 'aaron-blog',
+                scope: '/',
                 icons: [
                     {
                         src: 'assets/pwa-64x64.png',
@@ -58,11 +59,11 @@ export default defineConfig({
                 globIgnores: ['**/*.html', '**/*.webmanifest'],
                 maximumFileSizeToCacheInBytes: 50 * 1000 * 1000,
                 sourcemap: false,
-                navigateFallback: undefined,
+                navigateFallback: '/404',
                 cleanupOutdatedCaches: true,
                 runtimeCaching: [
                     {
-                        urlPattern: /^https:\/\/aaroon.me\/blog.*\.(js|css|ttf)$/,
+                        urlPattern: /^https:\/\/aaroon.me\/blog.*\.(js|css|ttf)$/i,
                         handler: 'CacheFirst',
                         options: {
                             cacheName: 'app-shell',
