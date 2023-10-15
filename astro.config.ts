@@ -18,7 +18,9 @@ export default defineConfig({
         react(),
         sitemap(),
         AstroPWA({
-            injectRegister: 'inline',
+            // devOptions: {
+            //     enabled: true
+            // },
             registerType: 'autoUpdate',
             manifest: {
                 name: "Aaron's Blog",
@@ -59,7 +61,7 @@ export default defineConfig({
                 globIgnores: ['**/*.html', '**/*.webmanifest'],
                 maximumFileSizeToCacheInBytes: 50 * 1000 * 1000,
                 sourcemap: false,
-                navigateFallback: '/404',
+                navigateFallback: '/blog/404',
                 cleanupOutdatedCaches: true,
                 runtimeCaching: [
                     {
