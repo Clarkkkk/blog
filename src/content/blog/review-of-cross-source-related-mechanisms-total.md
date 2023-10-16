@@ -16,12 +16,12 @@ tags:
 
 本系列文章包括四部分：
 
-[跨源相关机制综述（一）：同源策略与跨源资源共享](https://zhuanlan.zhihu.com/p/345012141)
+[跨源相关机制综述（一）：同源策略与跨源资源共享](https://aaroon.me/blog/posts/review-of-cross-source-correlation-mechanism-1--homologous-policy-and-cross-source-resource-sharing/)
 
-[跨源相关机制综述（二）：Fetch与XMLHttpRequest在跨源上的异同](https://zhuanlan.zhihu.com/p/345019873)
+[跨源相关机制综述（二）：Fetch与XMLHttpRequest在跨源上的异同](https://aaroon.me/blog/posts/cross-source-correlation-mechanism-review-2--cross-source-similarities-and-differences-between-fetch-and-xmlhttprequest/)
 
-[跨源相关机制综述（三）：crossorigin属性](https://zhuanlan.zhihu.com/p/345564689)
+[跨源相关机制综述（三）：crossorigin属性](https://aaroon.me/blog/posts/review-of-cross-source-correlation-mechanisms-iii--crossorigin-attributes/)
 
-[跨源相关机制综述（四）：Spectre攻击与跨源机制的改进](https://zhuanlan.zhihu.com/p/396062386)
+[跨源相关机制综述（四）：Spectre攻击与跨源机制的改进](https://aaroon.me/blog/posts/overview-of-cross-source-related-mechanisms-iv--spectre-attacks-and-improvements-in-cross-source-mechanisms/)
 
 这一系列文章字数超过8000，花了我大约一周多的时间。撰写期间我查阅了大量资料，并悉数附于文后，以供查阅。尽管如此，由于水平所限，难免有纰漏，如有发现，敬请斧正。

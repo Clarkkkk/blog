@@ -132,7 +132,7 @@ export const Coverflow = () => {
 }
 ```
 
-保留正确的空间关系需要用到`transform-style: preserve-3d`。这个属性会被`overflow: auto`重置（参见[之前的文章](https://zhuanlan.zhihu.com/p/657704241)），因此我们修改一下html结构，在外面加一层`<div>`。
+保留正确的空间关系需要用到`transform-style: preserve-3d`。这个属性会被`overflow: auto`重置（参见[之前的文章](https://aaroon.me/blog/posts/transform-style-preserve-3d-will-be-reset-to-transform-style-flat-due-to-properties-such-as-overflow/)），因此我们修改一下html结构，在外面加一层`<div>`。
 
 ```jsx
 export const Coverflow = () => {

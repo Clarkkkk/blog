@@ -19,11 +19,6 @@ tags:
 ![img](./css-writing-mode/v2-274ba3ac50e54631da4048404267dcdb_1440w.jpeg)
 
 
-
-
-
-添加图片注释，不超过 140 字（可选）
-
 除了竖向排列文本，你还可以竖向排列图标、按钮和任何页面上的元素。
 
 我应用的 CSS 使浏览器重新思考这个世界的方向，让这个元素以与正常方向成 90 度的方向流动。查看下面的实时演示。选中标题，看看现在光标是怎么在侧面的。
@@ -79,30 +74,15 @@ writing-mode: sideways-lr;
 ![img](./css-writing-mode/v2-3c8375d1013c8ebebf6dcab1053bcdcf_1440w.png)
 
 
-
-
-
-添加图片注释，不超过 140 字（可选）
-
 行内方向就是每一行中文字流动的方向。默认情况是，在水平的行中从左到右流动。想象一下你现在看的这行文字用打字机一个字一个字地打出来，打字的方向就是行内方向。
 
 ![img](./css-writing-mode/v2-0d57f541111beef3818959cc625266ce_1440w.png)
 
 
-
-
-
-添加图片注释，不超过 140 字（可选）
-
 字符方向就是字符指着的方向。例如你打一个A字，哪边是字符的顶端？不同的语言会有不同的方向。大部分语言中，字符都指向页面顶端，但不是所有语言都一样。
 
 ![img](./css-writing-mode/v2-2041d59277fb97cf120f340016ce6142_1440w.png)
 
-
-
-
-
-添加图片注释，不超过 140 字（可选）
 
 把这三个概念放在一起，就开始看到它们在整个系统中怎么运作了。
 
@@ -127,11 +107,6 @@ writing-mode: sideways-lr;
 ![img](./css-writing-mode/v2-627e4d16b1edcd1410a598ab1a60e44e_1440w.png)
 
 
-
-
-
-添加图片注释，不超过 140 字（可选）
-
 文字水平排列，从左往右流动（或称LTR）。块级方向则是从顶至底。
 
 这被称为基于拉丁文的系统是因为这个系统包含了所有使用拉丁字母的语言，包括英语、西班牙语、法语等等。但也有非拉丁字母的语言使用这个系统，例如希腊语、西里尔字母（俄语、乌克兰语、保加利亚语等等）和婆罗米文（梵文、泰文、藏文）等等。
@@ -148,11 +123,6 @@ writing-mode: sideways-lr;
 
 ![img](./css-writing-mode/v2-699fd7238827cd686ab9b30fc8d27f64_1440w.png)
 
-
-
-
-
-添加图片注释，不超过 140 字（可选）
 
 不仅文本方向是从右到左，网页中所有东西都是从右到左的。网页的右上角才是起始位置。重要的东西都放在右边。视线则从右往左看。所以典型的 RTL 网页的布局和 LTR 网页差不多，只是翻转过来了。
 
@@ -231,11 +201,6 @@ section {
 ![img](./css-writing-mode/v2-dc4341082b3ad17b81f740eba553fbde_1440w.png)
 
 
-
-
-
-添加图片注释，不超过 140 字（可选）
-
 我们注意到水平的文字从左往右流动，但竖直的文字则从右往左流动。令人抓狂，对吧？
 
 下面这本日版《Vogue》杂志混合使用了不同的书写模式。封面从左边翻开，和英语杂志正好相反。
@@ -243,20 +208,10 @@ section {
 ![img](./css-writing-mode/v2-f2b5426739f4118944217c121b6d6abd_1440w.png)
 
 
-
-
-
-添加图片注释，不超过 140 字（可选）
-
 下面这一页混合了英语和日语，日语中既有水平书写模式，也有竖直书写模式。在红色标题“Richard Stark”下面，你可以看到一段文字使用horizontal-tb 和 LTR 布局。同时页面底部的一段更长的文字以vertical-rl布局。那个放大的红字标记了文章的开头。竖向文本上面的长标题布局为 LTR、horizontal-tb。
 
 ![img](./css-writing-mode/v2-1983ca54b5f8c809fcac5f4b9aeb11c0_1440w.png)
 
-
-
-
-
-添加图片注释，不超过 140 字（可选）
 
 如何设置整个页面的默认值取决于你的用例。但每个元素、标题、section、article的流动方向都能按你的意愿设成与默认值不同的值。
 
@@ -284,11 +239,6 @@ h2, .photocaptions, section {
 ![img](./css-writing-mode/v2-7e2fb9ced4c51bbe3853b83b3c693150_1440w.png)
 
 
-
-
-
-添加图片注释，不超过 140 字（可选）
-
 **基于蒙古语的书写系统**
 
 希望你能理解到目前为止的内容。这些知识可能比预想中要复杂，但也不是太难。那么让我们继续讲基于蒙古语的系统吧。
@@ -308,11 +258,6 @@ h2, .photocaptions, section {
 ![img](./css-writing-mode/v2-238e94b02d8cc70034e6cb9811ba0044_1440w.png)
 
 
-
-
-
-添加图片注释，不超过 140 字（可选）
-
 现在你可能想跳过这个部分。可能你近期不需要排版蒙古语内容，但这一部分仍然对每个人都很重要，因为writing-mode: vertical-lr正是由蒙古语的布局方式定义。这意味着我们不应该自以为是地将vertical-lr用在别的语言上。
 
 如果我们从vertical-rl中举一反三，猜测vertical-lr怎么表现，我们可能会这么想：
@@ -320,20 +265,10 @@ h2, .photocaptions, section {
 ![img](./css-writing-mode/v2-19913a39f6b4b3235f6159fb3fe51526_1440w.png)
 
 
-
-
-
-添加图片注释，不超过 140 字（可选）
-
 但这是错的，它们实际上应该是这样的：
 
 ![img](./css-writing-mode/v2-fd1bb975ad15a7cb46dc2050d8df1b32_1440w.png)
 
-
-
-
-
-添加图片注释，不超过 140 字（可选）
 
 这个结果是不是出乎意料？在writing-mode: vertical-rl 和 writing-mode: vertical-lr中，拉丁字符都顺时针旋转了。两种书写模式都不能让文本逆时针旋转。
 
@@ -356,11 +291,6 @@ section {
 ![img](./css-writing-mode/v2-fbdec4d1943821fbf654aa5fb2bd0e1c_1440w.png)
 
 
-
-
-
-添加图片注释，不超过 140 字（可选）
-
 在[例子 4A](http://labs.jensimmons.com/workshop/writingmode-4A.html)中，标题被顺时针旋转，代码如下：
 
 ```
@@ -371,11 +301,6 @@ h1 {
 
 ![img](./css-writing-mode/v2-fdf1b6eeb4257a847e759f3361fa39cf_1440w.png)
 
-
-
-
-
-添加图片注释，不超过 140 字（可选）
 
 [例子 4B](http://labs.jensimmons.com/workshop/writingmode-4B.html)则把标题逆时针旋转了，代码如下：
 
@@ -418,11 +343,6 @@ h1 {
 ![img](./css-writing-mode/v2-50457a9b466d1488a7a2aaa4536344ad_1440w.png)
 
 
-
-
-
-添加图片注释，不超过 140 字（可选）
-
 [例子 4C](http://labs.jensimmons.com/workshop/writingmode-4C.html)中的CSS如下：
 
 ```
@@ -438,10 +358,5 @@ h1 {
 
 ![img](./css-writing-mode/v2-3932b6b935abdc88464693ed726d4d37_1440w.png)
 
-
-
-
-
-添加图片注释，不超过 140 字（可选）
 
 最后我以下述示例结束。在这个演示中，一篇长文的副标题使用了竖向书写模式。我喜欢这样的小细节，它们让人感觉内容焕然一新。

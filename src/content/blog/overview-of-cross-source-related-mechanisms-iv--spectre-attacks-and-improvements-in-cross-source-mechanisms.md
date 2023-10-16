@@ -71,11 +71,6 @@ Chromium还加入了嗅探机制，用于进一步确定Content-Type首部声明
 ![img](./overview-of-cross-source-related-mechanisms-iv--spectre-attacks-and-improvements-in-cross-source-mechanisms/v2-d5157f2fb36407e0705ed3deb73a341b_1440w.png)
 
 
-
-
-
-添加图片注释，不超过 140 字（可选）
-
 same-site的意思则是只有请求来自同一个eTLD+1，才允许加载响应。
 
 该首部同样只保护跨源模式为no-cors的请求对应的响应。响应被阻止时，不会进入相应进程。出于对兼容性的考虑，未声明该首部时，浏览器将其当作Cross-Origin-Resource-Policy: cross-origin。
@@ -139,3 +134,15 @@ Cross-Origin-Opener-Policy: same-origin
 经过讨论 ，并非所有平台都能支持多进程，[规范](https://html.spec.whatwg.org/multipage/browsers.html#cross-origin-isolation-mode)决定让用户代理 自行决定是否开启跨源隔离状态 。也就是说，即使声明了正确的COEP和COOP，部分用户代理仍有可能将crossOriginIsolated设为false。是否能使用SharedArrayBuffer等API将取决于crossOriginIsolated，而不止COEP和COOP。
 
 [这个网页](https://resourcepolicy.fyi/) 启用了COEP+COOP，可用于测试crossOriginIsolated。
+
+## 文章目录
+
+[跨源相关机制综述（总）](https://aaroon.me/blog/posts/review-of-cross-source-related-mechanisms-total/)
+
+[跨源相关机制综述（一）：同源策略与跨源资源共享](https://aaroon.me/blog/posts/review-of-cross-source-correlation-mechanism-1--homologous-policy-and-cross-source-resource-sharing/)
+
+[跨源相关机制综述（二）：Fetch与XMLHttpRequest在跨源上的异同](https://aaroon.me/blog/posts/cross-source-correlation-mechanism-review-2--cross-source-similarities-and-differences-between-fetch-and-xmlhttprequest/)
+
+[跨源相关机制综述（三）：crossorigin属性](https://aaroon.me/blog/posts/review-of-cross-source-correlation-mechanisms-iii--crossorigin-attributes/)
+
+[跨源相关机制综述（四）：Spectre攻击与跨源机制的改进](https://aaroon.me/blog/posts/overview-of-cross-source-related-mechanisms-iv--spectre-attacks-and-improvements-in-cross-source-mechanisms/)
