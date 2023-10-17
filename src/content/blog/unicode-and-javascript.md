@@ -15,7 +15,7 @@ tags:
 
 # Unicode和JavaScript
 
-*本文译自 Speaking JavaScript 的第 24 章，[原文地址](http://speakingjs.com/es5/ch24.html)，禁止转载。*
+*本文译自 Speaking JavaScript 的第 24 章，[原文地址](https://exploringjs.com/es5/ch24.html)，禁止转载。*
 
 
 
@@ -216,7 +216,7 @@ UglifyJS的输出则是这样的：
 
 `var π = Math.PI, ε = 1e-6;`
 
-标识符 π 和 ε 不能被正确解码，从而不能被识别为变量名。此外，一些字符串字面量因为包含超出7比特范围的码元也不能被正确解码。作为变通，你可以在<script>标签中添加合适的charset属性来加载代码：
+标识符 π 和 ε 不能被正确解码，从而不能被识别为变量名。此外，一些字符串字面量因为包含超出7比特范围的码元也不能被正确解码。作为变通，你可以在`<script>`标签中添加合适的charset属性来加载代码：
 
 `<script charset="utf-8" src="d3.js"></script>`
 
