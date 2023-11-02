@@ -12,12 +12,14 @@ const FormattedDatetime = ({ datetime }: { datetime: string | Date }) => {
     const date = myDatetime.toLocaleDateString(LOCALE, {
         year: 'numeric',
         month: 'long',
-        day: 'numeric'
+        day: 'numeric',
+        timeZone: 'Asia/Shanghai'
     })
 
     const time = myDatetime.toLocaleTimeString(LOCALE, {
         hour: '2-digit',
-        minute: '2-digit'
+        minute: '2-digit',
+        timeZone: 'Asia/Shanghai'
     })
 
     return (
