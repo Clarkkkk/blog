@@ -53,6 +53,7 @@ const next = pageNum < totalPages ? "" : "disabled";
           href={`/blog/posts/${pageNum + 1}`}
           className={`ml-4 select-none ${next}`}
           ariaLabel="Next"
+          prefetch
         >
           下一页
           <svg xmlns="http://www.w3.org/2000/svg" class={`${next}-svg`}>
