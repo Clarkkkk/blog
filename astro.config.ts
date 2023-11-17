@@ -1,4 +1,3 @@
-import prefetch from '@astrojs/prefetch'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
@@ -12,6 +11,9 @@ import { SITE } from './src/config'
 export default defineConfig({
     site: SITE.website,
     base: '/blog/',
+    prefetch: {
+        defaultStrategy: 'viewport'
+    },
     integrations: [
         tailwind({
             applyBaseStyles: false
@@ -94,9 +96,6 @@ export default defineConfig({
                     }
                 ]
             }
-        }),
-        prefetch({
-            throttle: 3
         })
     ],
     markdown: {
