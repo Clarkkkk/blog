@@ -2,7 +2,7 @@
 title: Vue笔记：v-model
 author: Aaron Zhou
 description: Vue笔记：v-model
-pubDatetime: 2020-09-19T18:00:00.000Z
+pubDatetime: 2020-09-19T10:00:00.000Z
 postSlug: vue-notes-v-model
 featured: false
 draft: false

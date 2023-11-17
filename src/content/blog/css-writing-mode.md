@@ -2,7 +2,7 @@
 title: CSS书写模式（Writing Mode）
 author: Aaron Zhou
 description: CSS书写模式（Writing Mode）
-pubDatetime: 2020-03-04T23:13:00.000Z
+pubDatetime: 2020-03-04T15:13:00.000Z
 postSlug: css-writing-mode
 featured: false
 draft: false

@@ -2,7 +2,7 @@
 title: 跨源相关机制综述（二）：Fetch与XMLHttpRequest在跨源上的异同
 author: Aaron Zhou
 description: 跨源相关机制综述（二）：Fetch与XMLHttpRequest在跨源上的异同
-pubDatetime: 2021-01-18T18:35:00.000Z
+pubDatetime: 2021-01-18T10:35:00.000Z
 postSlug: cross-source-correlation-mechanism-review-2--cross-source-similarities-and-differences-between-fetch-and-xmlhttprequest
 featured: false
 draft: false

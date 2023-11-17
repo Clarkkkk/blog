@@ -2,7 +2,7 @@
 title: 跨源相关机制综述（一）：同源策略与跨源资源共享
 author: Aaron Zhou
 description: 跨源相关机制综述（一）：同源策略与跨源资源共享
-pubDatetime: 2021-01-18T00:17:00.000Z
+pubDatetime: 2021-01-17T16:17:00.000Z
 postSlug: review-of-cross-source-correlation-mechanism-1--homologous-policy-and-cross-source-resource-sharing
 featured: false
 draft: false

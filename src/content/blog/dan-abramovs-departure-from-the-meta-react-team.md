@@ -2,12 +2,12 @@
 title: Dan Abramov从Meta React团队离职的推文
 author: Aaron Zhou
 description: Dan Abramov从Meta React团队离职的推文
-pubDatetime: 2023-11-17T13:43:33.854Z
+pubDatetime: 2023-07-22T07:40:00.000Z
 postSlug: dan-abramovs-departure-from-the-meta-react-team
 featured: false
 draft: false
 tags:
-    - temp
+    - 翻译
 ---
 我把[原文](https://twitter.com/dan_abramov/status/1682029195843739649)贴过来，粗略翻译一下。
 

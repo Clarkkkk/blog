@@ -2,7 +2,7 @@
 title: 跨源相关机制综述（三）：crossorigin属性
 author: Aaron Zhou
 description: 跨源相关机制综述（三）：crossorigin属性
-pubDatetime: 2021-01-21T01:16:00.000Z
+pubDatetime: 2021-01-20T17:16:00.000Z
 postSlug: review-of-cross-source-correlation-mechanisms-iii--crossorigin-attributes
 featured: false
 draft: false

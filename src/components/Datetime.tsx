@@ -9,7 +9,7 @@ export interface Props {
 const FormattedDatetime = ({ datetime }: { datetime: string | Date }) => {
     const myDatetime = new Date(datetime)
 
-    const date = myDatetime.toLocaleDateString(LOCALE, {
+    const date = myDatetime.toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',
         day: 'numeric',

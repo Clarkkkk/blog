@@ -2,7 +2,7 @@
 title: transform-style preserve-3d会被overflow等属性影响，重置为transform-style flat
 author: Aaron Zhou
 description: transform-style preserve-3d会被overflow等属性影响，重置为transform-style flat
-pubDatetime: 2023-09-22T20:01:00.000Z
+pubDatetime: 2023-09-22T12:01:00.000Z
 postSlug: transform-style-preserve-3d-will-be-reset-to-transform-style-flat-due-to-properties-such-as-overflow
 featured: false
 draft: false

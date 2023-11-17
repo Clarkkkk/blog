@@ -2,12 +2,13 @@
 title: ECMAScript 里的 MemberExpression 是指什么
 author: Aaron Zhou
 description: ECMAScript 里的 MemberExpression 是指什么
-pubDatetime: 2023-11-17T13:43:34.444Z
+pubDatetime: 2020-11-26T06:30:00.000Z
 postSlug: what-is-memberexpression-in-ecmascript
 featured: false
 draft: false
 tags:
-    - temp
+    - 笔记
+    - JavaScript
 ---
 看 ECMAScript 文档很多时候就像玩解谜游戏一样，在反复跳转之间才能弄懂一个名词究竟是什么意思。神奇的是，由于 ECMAScript 采用上下文无关（context-free）的文法编写，每个名词最终都能找到唯一的定义，而不会产生歧义或循环定义。
 

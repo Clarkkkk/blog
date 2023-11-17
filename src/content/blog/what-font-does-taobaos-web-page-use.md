@@ -2,12 +2,12 @@
 title: 淘宝的网页用的是什么字体？
 author: Aaron Zhou
 description: 淘宝的网页用的是什么字体？
-pubDatetime: 2023-11-17T13:43:37.740Z
+pubDatetime: 2021-04-23T17:18:00.000Z
 postSlug: what-font-does-taobaos-web-page-use
 featured: false
 draft: false
 tags:
-    - temp
+    - 笔记
 ---
 淘宝网页版的字体样式恐怕很多年没有变过了。前两个字体`tahoma`和`arial`都是英文字体。第三个`Hiragino Sans GB`是冬青黑体。第四个`\5b8b\4f53`其实就是宋体，没错，就是Windows上非常丑的中易宋体。
 

@@ -2,7 +2,7 @@
 title: 用scroll snap和scroll-driven animations实现苹果的经典动画cover flow
 author: Aaron Zhou
 description: 用scroll snap和scroll-driven animations实现苹果的经典动画cover flow
-pubDatetime: 2023-09-23T18:44:00.000Z
+pubDatetime: 2023-09-23T10:44:00.000Z
 postSlug: implement-apples-classic-animation-cover-flow-with-scroll-snap-and-scroll-driven-animations
 featured: false
 draft: false

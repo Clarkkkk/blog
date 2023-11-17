@@ -2,7 +2,7 @@
 title: 几个修改数组的方法
 author: Aaron Zhou
 description: 几个修改数组的方法
-pubDatetime: 2021-03-04T21:01:00.000Z
+pubDatetime: 2021-03-04T13:01:00.000Z
 postSlug: several-methods-for-modifying-arrays
 featured: false
 draft: false

@@ -2,7 +2,7 @@
 title: JavaScript The Definite Guide 读书笔记：Property和Attribute
 author: Aaron Zhou
 description: JavaScript The Definite Guide 读书笔记：Property和Attribute
-pubDatetime: 2021-01-07T14:05:00.000Z
+pubDatetime: 2021-01-07T06:05:00.000Z
 postSlug: javascript-the-definite-guide-to-reading-notes-property-and-attribute
 featured: false
 draft: false

@@ -2,7 +2,7 @@
 title: 在远程服务器中发布Vue项目
 author: Aaron Zhou
 description: 在远程服务器中发布Vue项目
-pubDatetime: 2021-02-24T02:23:00.000Z
+pubDatetime: 2021-02-23T18:23:00.000Z
 postSlug: publish-the-vue-project-on-a-remote-server
 featured: false
 draft: false

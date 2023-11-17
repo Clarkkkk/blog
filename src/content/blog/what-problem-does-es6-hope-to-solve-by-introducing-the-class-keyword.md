@@ -2,12 +2,13 @@
 title: ES6 提出 class 关键字是希望解决什么问题？
 author: Aaron Zhou
 description: ES6 提出 class 关键字是希望解决什么问题？
-pubDatetime: 2023-11-17T13:43:35.531Z
+pubDatetime: 2020-12-02T07:33:00.000Z
 postSlug: what-problem-does-es6-hope-to-solve-by-introducing-the-class-keyword
 featured: false
 draft: false
 tags:
-    - temp
+    - 笔记
+    - JavaScript
 ---
 真的有人不喜欢用class吗，我就用得挺舒服的。
 

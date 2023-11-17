@@ -2,7 +2,7 @@
 title: 各种对齐方式
 author: Aaron Zhou
 description: 各种对齐方式
-pubDatetime: 2020-07-01T19:29:00.000Z
+pubDatetime: 2020-07-01T11:29:00.000Z
 postSlug: various-alignments
 featured: false
 draft: false

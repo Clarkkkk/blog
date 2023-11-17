@@ -2,12 +2,12 @@
 title: 在VScode中，代码提示左边的图标各自代表什么含义？
 author: Aaron Zhou
 description: 在VScode中，代码提示左边的图标各自代表什么含义？
-pubDatetime: 2023-11-17T13:43:36.633Z
+pubDatetime: 2020-06-13T04:55:00.000Z
 postSlug: what-do-the-icons-to-the-left-of-the-code-prompt-mean-in-vscode
 featured: false
 draft: false
 tags:
-    - temp
+    - 笔记
 ---
 正好今天早上在好奇为什么普通 Markdown 文件旁边的图标是这个：
 

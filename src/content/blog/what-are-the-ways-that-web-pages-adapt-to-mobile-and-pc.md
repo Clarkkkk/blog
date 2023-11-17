@@ -2,12 +2,14 @@
 title: 网页适应手机端和pc端的方法有哪些？
 author: Aaron Zhou
 description: 网页适应手机端和pc端的方法有哪些？
-pubDatetime: 2023-11-17T13:43:38.829Z
+pubDatetime: 2021-03-14T08:38:00.000Z
 postSlug: what-are-the-ways-that-web-pages-adapt-to-mobile-and-pc
 featured: false
 draft: false
 tags:
-    - temp
+    - 笔记
+    - HTML
+    - CSS
 ---
 关于响应式布局有很多可以讲的东西，我写几个常见的方面，也当是自己的学习总结。
 

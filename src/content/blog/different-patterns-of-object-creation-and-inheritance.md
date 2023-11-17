@@ -2,7 +2,7 @@
 title: 对象创建与继承的不同模式
 author: Aaron Zhou
 description: 对象创建与继承的不同模式
-pubDatetime: 2020-12-02T11:08:00.000Z
+pubDatetime: 2020-12-02T03:08:00.000Z
 postSlug: different-patterns-of-object-creation-and-inheritance
 featured: false
 draft: false
