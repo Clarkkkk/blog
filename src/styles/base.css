@@ -34,8 +34,8 @@
         display: block;
     }
     body {
-        @apply selection:text-skin-fill flex min-h-[100svh] flex-col bg-skin-fill 
-    text-skin-base selection:bg-skin-accent selection:bg-opacity-70;
+        @apply flex min-h-[100svh] flex-col bg-skin-fill text-skin-base 
+    selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-fill;
         font-family:
             seravek,
             Helvetica Neue,
@@ -68,7 +68,7 @@
 
     
     prose-code:rounded prose-code:bg-skin-card 
-    prose-code:bg-opacity-75 prose-code:p-1 prose-code:!text-skin-base 
+    prose-code:bg-opacity-75 prose-code:p-1 prose-code:!text-skin-base
     prose-code:before:!content-[''] prose-code:after:!content-['']
     prose-pre:!text-skin-base prose-ol:!text-skin-base 
     prose-ul:overflow-x-clip prose-ul:!text-skin-base prose-li:marker:!text-skin-accent
@@ -136,6 +136,10 @@
 
     pre > code {
         white-space: pre;
+    }
+
+    pre > code > span.line {
+        color: #abb2bf;
     }
 }
 

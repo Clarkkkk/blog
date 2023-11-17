@@ -79,8 +79,6 @@ const socialImageURL = new URL(
     <script src="/src/pwa.ts"></script>
     { pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} /> }
 
-    <ViewTransitions />
-
     <script is:inline src="/blog/toggle-theme.js" defer></script>
   </head>
   <body>
