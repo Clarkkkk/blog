@@ -18,7 +18,7 @@ const { href, className, ariaLabel, title, disabled = false, prefetch } = Astro.
   aria-label={ariaLabel}
   title={title}
   aria-disabled={disabled}
-  rel={prefetch ? 'prefetch' : undefined}
+  data-astro-prefetch={prefetch}
 >
   <slot />
 </a>
