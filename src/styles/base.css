@@ -149,6 +149,13 @@
     pre > code > span.line {
         color: #abb2bf;
     }
+
+    html::view-transition-group(*) {
+        animation-duration: 0.5s;
+        animation-timing-function: ease;
+        /** reduce animation glitch */
+        animation-delay: 34ms;
+    }
 }
 
 @layer components {

@@ -42,9 +42,8 @@ const sortTagsPost = getSortedPosts(tagPosts);
   <Header activeNav="tags" />
   <Main
     pageTitle={[`标签：`, `${tag}`]}
-    titleTransition={tag}
   >
-    <h1 slot="title" transition:name={tag}>{`Tag:${tag}`}</h1>
+    <h1 slot="title">{`Tag:${tag}`}</h1>
     <ul>
       {
         sortTagsPost.map(({ data, body }) => (

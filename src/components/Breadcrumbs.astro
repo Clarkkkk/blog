@@ -25,7 +25,6 @@ breadcrumbList[0] === "posts" &&
             <span
               aria-current="page"
             >
-              {/* make the last part lowercase in Home > Tags > some-tag */}
               {breadcrumb}
             </span>
           </li>
@@ -47,7 +46,7 @@ breadcrumbList[0] === "posts" &&
   .breadcrumb ul li {
     @apply inline;
   }
-  .breadcrumb ul li a {
+  .breadcrumb ul li {
     @apply capitalize opacity-70;
   }
   .breadcrumb ul li span {

@@ -18,6 +18,10 @@ const { title, author, description, ogImage, canonicalURL, pubDatetime, tags } =
 
 const { Content } = await post.render();
 
+const headerProps = {
+    style: { viewTransitionName: slugifyStr(title) }
+}
+
 const ogImageUrl = typeof ogImage === "string" ? ogImage : ogImage?.src;
 const ogUrl = new URL(
   ogImageUrl ?? `/posts/${slugifyStr(title)}.png`,
@@ -46,7 +50,7 @@ const ogUrl = new URL(
     </button>
   </div>
   <main id="main-content" class="max-w-[800px]">
-    <h1 transition:name={slugifyStr(title)} class="text-3xl font-semibold text-skin-accent">{title}</h1>
+    <h1 {...headerProps} transition:name={slugifyStr(title)} class="text-3xl font-semibold text-skin-accent inline-block">{title}</h1>
     <Datetime datetime={pubDatetime} size="lg" className="my-2" />
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-[1200px]">
       <Content />
