@@ -118,5 +118,8 @@ export default defineConfig({
             exclude: ['@resvg/resvg-js']
         }
     },
-    scopedStyleStrategy: 'where'
+    scopedStyleStrategy: 'where',
+    experimental: {
+        contentCollectionCache: true
+    }
 })
