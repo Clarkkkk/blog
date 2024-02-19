@@ -32,6 +32,7 @@ export default defineConfig({
                 start_url: 'index.html',
                 id: 'aaron-blog',
                 scope: '/',
+                theme_color: '#FBFEFB',
                 icons: [
                     {
                         src: 'assets/pwa-64x64.png',
