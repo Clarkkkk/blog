@@ -246,7 +246,7 @@ UglifyJS的输出则是这样的：
 
 JavaScript引擎会解码这段源码（通常使用UTF-8编码）然后创建一个有两个UTF-16码元的字符串。此外，你还可以自己计算两个源码，然后使用Unicode转义序列。有一些网页应用可以帮你计算：
 
-- [UTF Converter](macchiato.com/unicode/convert.html)
+- [UTF Converter](https://macchiato.com/unicode/convert.html)
 - ["JavaScript escapes" by Mathisa Bynens](https://mothereff.in/js-escapes)
 
 前面定义的函数toUTF16也可以计算：
@@ -353,8 +353,8 @@ JavaScript的正则表达式（见第十九章）对Unicode的支持很有限。
 想获取更多关于Unicode的信息，参见以下资料：
 
 - 维基百科有不少关于[Unicode](https://en.wikipedia.org/wiki/Unicode)及相关术语的优秀词条
-- [Unicode.org](Unicode.org)是Unicode联盟的官方网站，FAQ部分也是一个很好的资源
-- Joel Spolsky的介绍文章很有帮助：[“The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)”](www.joelonsoftware.com/articles/Unicode.html)。
+- [Unicode.org](https://Unicode.org)是Unicode联盟的官方网站，FAQ部分也是一个很好的资源
+- Joel Spolsky的介绍文章很有帮助：[“The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)”](https://www.joelonsoftware.com/articles/Unicode.html)。
 
 更多关于JavaScript中的Unicode支持的信息，参见：
 
